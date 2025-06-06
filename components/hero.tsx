@@ -2,12 +2,13 @@
 
 import { useEffect, useRef } from "react"
 import { Canvas } from "@react-three/fiber"
-import { OrbitControls, Sphere, MeshDistortMaterial, Stars } from "@react-three/drei"
+import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei"
 import { gsap } from "gsap/gsap-core"
 import { ChevronDown } from "lucide-react"
+import * as THREE from "three"
 
 function AnimatedSphere() {
-  const meshRef = useRef<any>()
+  const meshRef = useRef<THREE.Mesh>(null)
 
   useEffect(() => {
     if (meshRef.current) {
@@ -28,16 +29,16 @@ function AnimatedSphere() {
   )
 }
 
-function GalaxyBackground() {
-  return (
-    <>
-      <Stars radius={300} depth={60} count={1000} factor={7}
-        saturation={0} fade={true} speed={0.5} />
+// function GalaxyBackground() {
+//   return (
+//     <>
+//       <Stars radius={300} depth={60} count={1000} factor={7}
+//         saturation={0} fade={true} speed={0.5} />
       
-      <Stars radius={100} depth={30} count={500} factor={3} saturation={0.2} fade={true} speed={0.8} />
-    </>
-  )
-}
+//       <Stars radius={100} depth={30} count={500} factor={3} saturation={0.2} fade={true} speed={0.8} />
+//     </>
+//   )
+// }
 
 export default function Hero() {
   const heroRef = useRef<HTMLElement>(null)
@@ -76,8 +77,8 @@ export default function Hero() {
         ease: "power2.inOut",
       })
 
-      gsap.utils.toArray(".star").forEach((star: any, index) => {
-        gsap.to(star, {
+      gsap.utils.toArray(".star").forEach((star, index) => {
+        gsap.to(star as HTMLElement, {
           y: "random(-20, 20)",
           x: "random(-20, 20)",
           duration: "random(3, 6)",
@@ -87,7 +88,7 @@ export default function Hero() {
           delay: index * 0.1,
         })
       
-        gsap.to(star, {
+        gsap.to(star as HTMLElement, {
           opacity: "random(0.3, 1)",
           duration: "random(1,3)",
           repeat: -1,

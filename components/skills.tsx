@@ -181,7 +181,7 @@ export default function Skills() {
       if (titleRef.current) {
         titleRef.current.innerHTML = titleChars
           .map(
-            (char, i) =>
+            (char) =>
               `<span class="char" data-char="${char}">${
                 char === " " ? "&nbsp;" : char
               }</span>`
@@ -291,11 +291,11 @@ export default function Skills() {
         stagger: 1,
       });
 
-      gsap.utils.toArray(".skill-card").forEach((card: any, index) => {
-        const light = card.querySelector(".traveling-light");
-        const cardRect = card.getBoundingClientRect();
-        const cardWidth = card.offsetWidth;
-        const cardHeight = card.offsetHeight;
+      gsap.utils.toArray(".skill-card").forEach((card, index) => {
+        const cardEl = card as HTMLElement
+        const light = cardEl.querySelector(".traveling-light");
+        const cardWidth = cardEl.offsetWidth;
+        const cardHeight = cardEl.offsetHeight;
         const borderRadius = 24; 
         const path = `
           M${borderRadius},0 
@@ -332,7 +332,7 @@ export default function Skills() {
       });
 
       const skillCards = document.querySelectorAll(".skill-card");
-      skillCards.forEach((card, index) => {
+      skillCards.forEach((card) => {
         const tl = gsap.timeline({ paused: true });
         const cardGlow = card.querySelector(".card-glow");
         const categoryIcon = card.querySelector(".category-icon");

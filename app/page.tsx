@@ -43,7 +43,7 @@ export default function Home() {
             y: 50,
             ease: "none",
             scrollTrigger: {
-              trigger: element,
+              trigger: element as HTMLElement,
               start: "top bottom",
               end: "bottom top",
               scrub: true,

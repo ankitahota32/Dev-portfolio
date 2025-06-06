@@ -303,7 +303,7 @@ export default function Contact() {
             <Zap className="text-yellow-400 w-8 h-8 animate-pulse" />
           </div>
           <p className="text-lg text-white/80 max-w-2xl mx-auto">
-            Ready to launch your next project into the digital universe? Let's
+            Ready to launch your next project into the digital universe? Let&apos;s
             connect across the cosmos
           </p>
         </div>
@@ -383,7 +383,7 @@ export default function Contact() {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label className="block text-white/80 text-sm font-medium mb-2">
-                  Sender's Name
+                  Sender&apos;s Name
                 </label>
                 <input
                   type="text"
@@ -398,7 +398,7 @@ export default function Contact() {
 
               <div>
                 <label className="block text-white/80 text-sm font-medium mb-2">
-                  Sender's Email
+                  Sender&apos;s Email
                 </label>
                 <input
                   type="email"

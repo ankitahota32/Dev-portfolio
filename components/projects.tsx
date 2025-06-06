@@ -2,6 +2,7 @@
 import { useEffect, useRef } from "react"
 import { gsap } from "gsap"
 import { ExternalLink, Github } from "lucide-react"
+import Image from 'next/image'
 
 const projects = [
   {
@@ -89,10 +90,12 @@ export default function Projects() {
                         <div key={index}
                             className="project-card bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-blue-400/50 transition-all duration-300 group">
                             <div className="relative overflow-hidden">
-                                <img 
+                                <Image
                                     src={project.image}
                                     alt={project.title}
-                                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
+                                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                                    width={400}
+                                     height={400}/>
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent " />
                             </div>
 

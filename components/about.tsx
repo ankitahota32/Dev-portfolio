@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import Image from 'next/image'
 
 export default function About() {
   const aboutRef = useRef<HTMLElement>(null);
@@ -92,10 +93,12 @@ export default function About() {
               <div className="gif-glow absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl blur-xl"></div>
 
               <div className="gif-float relative w-full h-96 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl backdrop-blur-sm border border-white/10 overflow-hidden group hover:border-white/20 transition-all duration-500">
-                <img
+                <Image
                   src="https://camo.githubusercontent.com/5bf0da46c5398f75e2ec953592c02afcf69379dcdb12a0c2922654a57b51fce2/68747470733a2f2f63646e2e6472696262626c652e636f6d2f75736572732f313336343032392f73637265656e73686f74732f31363039333236382f6d656469612f36386538326137666234393034363134613930363664366235343063313462322e676966"
                   alt="gif"
                   className="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500"
+                  width={400}
+                  height={300}
                 />
 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>

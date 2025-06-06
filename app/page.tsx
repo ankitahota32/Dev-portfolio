@@ -35,9 +35,9 @@ export default function Home() {
         },
       )
 
-      gsap.utils.toArray(".parallax").forEach((element: any) => {
+      gsap.utils.toArray(".parallax").forEach((element) => {
         gsap.fromTo(
-          element,
+          element as Element,
           { y: -50 },
           {
             y: 50,

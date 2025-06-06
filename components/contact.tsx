@@ -15,6 +15,7 @@ import {
   Globe,
   Zap,
 } from "lucide-react";
+import { Ray } from "three";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -72,8 +73,8 @@ export default function Contact() {
         ease: "power2.inOut",
       });
 
-      gsap.utils.toArray(".space-particle").forEach((particle: any, index) => {
-        gsap.to(particle, {
+      gsap.utils.toArray(".space-particle").forEach((particle, index) => {
+        gsap.to(particle as HTMLElement, {
           y: "random(-30, 30)",
           x: "random(-30, 30)",
           duration: "random(4, 8)",
@@ -83,7 +84,7 @@ export default function Contact() {
           delay: index * 0.2,
         });
 
-        gsap.to(particle, {
+        gsap.to(particle as HTMLElement, {
           opacity: "random(0.3, 1)",
           duration: "random(2,4)",
           repeat: -1,
@@ -93,9 +94,9 @@ export default function Contact() {
         });
       });
 
-      gsap.utils.toArray(".cosmic-ray").forEach((ray: any, index) => {
+      gsap.utils.toArray(".cosmic-ray").forEach((ray, index) => {
         gsap.fromTo(
-          ray,
+          ray as Ray,
           {
             scaleX: 0,
             opacity: 0,

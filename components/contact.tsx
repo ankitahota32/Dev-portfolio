@@ -333,21 +333,6 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="group relative bg-white/[0.02] backdrop-blur-xl rounded-2xl p-6 border border-white/10 hover:border-green-400/30 transition-all duration-500 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="relative flex items-center">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-400/20 to-emerald-400/20 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                    <Phone className="text-green-400 w-5 h-5" />
-                  </div>
-                  <div>
-                    <p className="text-white/60 text-sm">
-                      Phone
-                    </p>
-                    <p className="text-white font-medium">+91 8144-069-547</p>
-                  </div>
-                </div>
-              </div>
-
               <div className="group relative bg-white/[0.02] backdrop-blur-xl rounded-2xl p-6 border border-white/10 hover:border-purple-400/30 transition-all duration-500 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="relative flex items-center">

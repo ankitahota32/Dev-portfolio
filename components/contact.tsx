@@ -8,7 +8,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
   Mail,
   MapPin,
-  Phone,
   Send,
   Rocket,
   Satellite,

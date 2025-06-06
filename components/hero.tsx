@@ -29,16 +29,6 @@ function AnimatedSphere() {
   )
 }
 
-// function GalaxyBackground() {
-//   return (
-//     <>
-//       <Stars radius={300} depth={60} count={1000} factor={7}
-//         saturation={0} fade={true} speed={0.5} />
-      
-//       <Stars radius={100} depth={30} count={500} factor={3} saturation={0.2} fade={true} speed={0.8} />
-//     </>
-//   )
-// }
 
 export default function Hero() {
   const heroRef = useRef<HTMLElement>(null)
@@ -336,9 +326,9 @@ export default function Hero() {
 
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
         <h1 className="hero-title text-5xl md:text-7xl font-bold mb-6">
-          <span className="text-white">Full Stack</span>
+          <span className="text-white">Ankita</span>
           <br />
-          <span className="text-blue-400">Developer</span>
+          <span className="text-blue-400">Hota</span>
         </h1>
 
         <p className="hero-subtitle text-xl md:text-2xl text-white/80 mb-4">

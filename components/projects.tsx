@@ -53,7 +53,7 @@ const projects = [
     image: "/Screenshot (208).png",
     github:
       "https://github.com/ankitahota32/Gsap-landingpage, https://github.com/ankitahota32/Gsap-landing-backend",
-    live: "https://gsap-e-commerce.netlify.app/home",
+    live: "https://gsap-e-commerce.netlify.app/",
   },
 ];
 

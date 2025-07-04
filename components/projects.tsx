@@ -39,13 +39,21 @@ const projects = [
   },
 
   {
-    title: "Signature App",
+    title: "Gsap e-commerce",
     description:
-      "Signature app is made using HTML, CSS and JavaScript. Here you can pick your text size and background color as well as you can download it.",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    image: "/Screenshot (177).png",
-    github: "https://github.com/ankitahota32/Signature-Web",
-    live: "https://starlit-kheer-39fb32.netlify.app/",
+      "An e-com website made using next.js and nest.js. I have used Gsap and three.js for animation. This project provides user authentication, placing mock orders and many more features.",
+    technologies: [
+      "Next.js",
+      "Nest.js",
+      "Gsap",
+      "Threejs",
+      "MongoDB",
+      "TypeScript",
+    ],
+    image: "/Screenshot (208).png",
+    github:
+      "https://github.com/ankitahota32/Gsap-landingpage, https://github.com/ankitahota32/Gsap-landing-backend",
+    live: "https://gsap-e-commerce.netlify.app/home",
   },
 ];
 
